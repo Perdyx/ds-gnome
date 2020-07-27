@@ -31,7 +31,7 @@ Change `Main.panel.addToStatusArea('places-menu', _indicator, pos, 'left');` to 
 Install Activities Configurator extension from [https://extensions.gnome.org/extension/358/activities-configurator/](https://extensions.gnome.org/extension/358/activities-configurator/)
 
 - Set icon to profile picture (can be found at /var/lib/AccountsService/icons/USERNAME)
-- Set icon scale to "1.9"
+- Set icon scale to "1.8"
 - Set icon padding to "0"
 - Set text to "User: USERNAME@HOSTNAME"
 - Disable hotcorner
