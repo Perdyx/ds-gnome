@@ -12,15 +12,6 @@ Software depicted: Armitage, [Empire](https://github.com/EmpireProject/Empire), 
 
 ## Guide
 
-### Wallpaper
-
-Pulled from the [DedSec Fankit](https://news.ubisoft.com/en-us/article/13qrfvKY8TBLMHHDSe2zdh/watch-dogs-2-grab-the-dedsec-fankit-and-marcus-holloway-cosplay-guide).
-
-```
-cp wallpaper.jpg ~/Pictures
-gsettings set org.gnome.desktop.background picture-uri file://$HOME/Pictures/wallpaper.jpg
-```
-
 ### Fonts
 
 These are up to personal preference really, but if you are on Ubuntu or a derivative, Ubuntu Regular looks pretty good.
@@ -29,25 +20,6 @@ These are up to personal preference really, but if you are on Ubuntu or a deriva
 gsettings set org.gnome.desktop.interface font-name 'Ubuntu 11'
 gsettings set org.gnome.desktop.interface document-font-name 'Ubuntu 11'
 gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Ubuntu 11'
-```
-
-### Theme
-
-Adwaita is the default on GNOME and looks close enough to the concept, however if you want a slightly more accurate look, you can try the [Deepin GTK theme](), though I chose Adwaita because the shell theme that ships with Deepin is unfinished/broken as of writing this and the GTK theme looks slightly out of place when used with the classic panel.
-
-The shell theme here is just a slightly modified version of the one found in the GNOME Classic session which should be included in the `gnome-session` Debian package. The default CSS file can be found at /usr/share/gnome-shell/theme/gnome-classic.css.
-
-`cp themes/Classic ~/.themes/Classic`
-
-Set GTK theme to Adwaita and shell theme to Classic.
-
-### Terminal
-
-Terminal colours are based on the Isotope theme found [here](http://terminal.sexy).
-
-```
-sudo apt install -y terminator
-cp terminator/config ~/.config/terminator/config
 ```
 
 ### Panel
@@ -64,3 +36,31 @@ Install Activities Configurator extension from [https://extensions.gnome.org/ext
 - Set text to "User: USERNAME@HOSTNAME"
 - Disable hotcorner
 - Hide panel rounded corners
+
+### Terminal
+
+Terminal colours are based on the Isotope theme found [here](http://terminal.sexy).
+
+```
+sudo apt install -y terminator
+cp terminator/config ~/.config/terminator/config
+```
+
+### Theme
+
+Adwaita is the default on GNOME and looks close enough to the concept, however if you want a slightly more accurate look, you can try the [Deepin GTK theme](), though I chose Adwaita because the shell theme that ships with Deepin is unfinished/broken as of writing this and the GTK theme looks slightly out of place when used with the classic panel.
+
+The shell theme here is just a slightly modified version of the one found in the GNOME Classic session which should be included in the `gnome-session` Debian package. The default CSS file can be found at /usr/share/gnome-shell/theme/gnome-classic.css.
+
+`cp themes/Classic ~/.themes/Classic`
+
+Set GTK theme to Adwaita and shell theme to Classic.
+
+### Wallpaper
+
+Pulled from the [DedSec Fankit](https://news.ubisoft.com/en-us/article/13qrfvKY8TBLMHHDSe2zdh/watch-dogs-2-grab-the-dedsec-fankit-and-marcus-holloway-cosplay-guide).
+
+```
+cp wallpaper.jpg ~/Pictures
+gsettings set org.gnome.desktop.background picture-uri file://$HOME/Pictures/wallpaper.jpg
+```
