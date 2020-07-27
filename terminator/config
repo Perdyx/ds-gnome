@@ -1,0 +1,26 @@
+[global_config]
+  tab_position = bottom
+  title_hide_sizetext = True
+  title_inactive_fg_color = "#ffffff"
+  title_inactive_bg_color = "#c80003"
+  inactive_color_offset = 1.0
+[keybindings]
+[profiles]
+  [[default]]
+    background_darkness = 0.8
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = Fira Mono Medium 11
+    foreground_color = "#ffffff"
+    scrollbar_position = hidden
+    scrollback_infinite = True
+    palette = "#000000:#ff0000:#33ff00:#ffff00:#0066ff:#cc00ff:#00ffff:#d0d0d0:#808080:#ff0000:#33ff00:#ffff00:#0066ff:#cc00ff:#00ffff:#ffffff"
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
