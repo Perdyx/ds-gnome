@@ -2,7 +2,7 @@
 
 ## Description
 
-Styling guide and resources based on the representation of Kali linux in Ubisoft's Watch Dogs 2.
+Styling guide and resources based on the representation of Kali Linux in Ubisoft's Watch Dogs 2.
 
 Reference article: [https://www.behance.net/gallery/45126777/Watch-Dogs-2-Graphic-Direction](https://www.behance.net/gallery/45126777/Watch-Dogs-2-Graphic-Direction)
 
