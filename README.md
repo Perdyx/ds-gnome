@@ -41,7 +41,7 @@ The shell theme here is just a slightly modified version of the one found in the
 
 Set GTK theme to Adwaita and shell theme to Classic.
 
-### Terminator
+### Terminal
 
 Terminal colours are based on the Isotope theme found [here](http://terminal.sexy).
 
