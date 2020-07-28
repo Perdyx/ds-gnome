@@ -1,4 +1,4 @@
-# wd2-gnome
+# ds-gnome
 
 ## Description
 
