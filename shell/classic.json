@@ -1,0 +1,10 @@
+{
+    "parentMode": "user",
+    "stylesheetName": "gnome-wd2.css",
+    "hasOverview": true,
+    "enabledExtensions": ["apps-menu@gnome-shell-extensions.gcampax.github.com", "horizontal-workspaces@gnome-shell-extensions.gcampax.github.com", "places-menu@gnome-shell-extensions.gcampax.github.com", "window-list@gnome-shell-extensions.gcampax.github.com"],
+    "panel": { "left": ["appMenu"],
+               "center": ["dateMenu"],
+               "right": ["a11y", "keyboard", "aggregateMenu"]
+             }
+}

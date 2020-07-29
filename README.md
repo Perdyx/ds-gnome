@@ -10,11 +10,15 @@ Reference article: [https://www.behance.net/gallery/45126777/Watch-Dogs-2-Graphi
 
 Software depicted: Armitage, [Empire](https://github.com/EmpireProject/Empire), GNOME, Terminator
 
+## Usage
+
+Log out select GNOME Classic as your session, then log back in again.
+
 ## Guide
 
 ### Fonts
 
-These are up to personal preference really, but if you are on Ubuntu or a derivative, Ubuntu Regular looks pretty good.
+These are up to personal preference really, as the ones listed in the reference article are non-free, but if you are on Ubuntu or a derivative, Ubuntu Regular looks pretty good for the interface.
 
 ```
 gsettings set org.gnome.desktop.interface font-name 'Ubuntu 11'
@@ -22,20 +26,55 @@ gsettings set org.gnome.desktop.interface document-font-name 'Ubuntu 11'
 gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Ubuntu 11'
 ```
 
+For the monospace font, [https://sourcefoundry.org/hack/](https://sourcefoundry.org/hack/) works well.
+
 ### Panel
 
-Change `Main.panel.addToStatusArea('apps-menu', appsMenuButton, index, 'left');` to `Main.panel.addToStatusArea('apps-menu', appsMenuButton, 20, 'right');` in /usr/share/gnome-shell/extensions/apps-menu@gnome-shell-extensions.gcampax.github.com/extension.js.
+Make the following changes in /usr/share/gnome-shell/extensions/apps-menu@gnome-shell-extensions.
 
-Change `Main.panel.addToStatusArea('places-menu', _indicator, pos, 'left');` to `Main.panel.addToStatusArea('places-menu', _indicator, 20, 'right');` in /usr/share/gnome-shell/extensions/places-menu@gnome-shell-extensions.gcampax.github.com/extension.js.
+```
+let index = Main.sessionMode.panel.left.indexOf('activities') + 1;
+Main.panel.addToStatusArea('apps-menu', appsMenuButton, index, 'left');
+```
+```
+let index = Main.sessionMode.panel.left.indexOf('activities') + 1;
+// Main.panel.addToStatusArea('apps-menu', appsMenuButton, index, 'left');
+Main.panel.addToStatusArea('apps-menu', appsMenuButton, 20, 'right');
+```
+
+Make the following changes in /usr/share/gnome-shell/extensions/places-menu@gnome-shell-extensions.gcampax.github.com/extension.js.
+
+```
+let pos = Main.sessionMode.panel.left.indexOf('appMenu');
+    if ('apps-menu' in Main.panel.statusArea)
+	pos++;
+Main.panel.addToStatusArea('places-menu', _indicator, pos, 'left');
+```
+```
+let pos = Main.sessionMode.panel.left.indexOf('appMenu');
+    if ('apps-menu' in Main.panel.statusArea)
+	pos++;
+// Main.panel.addToStatusArea('places-menu', _indicator, pos, 'left');
+Main.panel.addToStatusArea('places-menu', _indicator, 20, 'right');
+```
 
 Install Activities Configurator extension from [https://extensions.gnome.org/extension/358/activities-configurator/](https://extensions.gnome.org/extension/358/activities-configurator/)
 
 - Set icon to profile picture (can be found at /var/lib/AccountsService/icons/USERNAME)
-- Set icon scale to "1.8"
+- Set icon scale to "1.9"
 - Set icon padding to "0"
 - Set text to "User: USERNAME@HOSTNAME"
 - Disable hotcorner
 - Hide panel rounded corners
+
+### Session
+
+This is just a modified version of the GNOME Classic session.
+
+```
+sudo cp /usr/share/gnome-shell/modes/classic.json /usr/share/gnome-shell/modes/classic-default.json
+sudo cp shell/classic.json /usr/share/gnome-shell/modes
+```
 
 ### Terminal
 
@@ -43,7 +82,7 @@ Terminal colours are based on the Isotope theme found [here](http://terminal.sex
 
 ```
 sudo apt install -y terminator
-cp terminator/config ~/.config/terminator/config
+cp configs/terminator ~/.config/terminator/config
 ```
 
 ### Theme
@@ -52,13 +91,16 @@ Adwaita is the default on GNOME and looks close enough to the concept, however i
 
 The shell theme here is just a slightly modified version of the one found in the GNOME Classic session which should be included in the `gnome-session` Debian package. The default CSS file can be found at /usr/share/gnome-shell/theme/gnome-classic.css.
 
-`cp themes/Classic ~/.themes/Classic`
+```
+mkdir -p .themes/DedSec/gnome-shell
+cp shell/gnome-shell.css ~/.themes/DedSec/gnome-shell
+```
 
 Set GTK theme to Adwaita and shell theme to Classic.
 
 ### Wallpaper
 
-Pulled from the [DedSec Fankit](https://news.ubisoft.com/en-us/article/13qrfvKY8TBLMHHDSe2zdh/watch-dogs-2-grab-the-dedsec-fankit-and-marcus-holloway-cosplay-guide).
+Modified from the [DedSec Fankit](https://news.ubisoft.com/en-us/article/13qrfvKY8TBLMHHDSe2zdh/watch-dogs-2-grab-the-dedsec-fankit-and-marcus-holloway-cosplay-guide).
 
 ```
 cp wallpaper.jpg ~/Pictures
