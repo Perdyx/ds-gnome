@@ -98,6 +98,8 @@ cp shell/gnome-shell.css ~/.themes/DedSec/gnome-shell
 
 Set GTK theme to Adwaita and shell theme to Classic.
 
+For the cursor theme, you can use this [https://www.gnome-look.org/p/1230923/](https://www.gnome-look.org/p/1230923/) for a more retro look, although Adwaita works fine too.
+
 ### Wallpaper
 
 Modified from the [DedSec Fankit](https://news.ubisoft.com/en-us/article/13qrfvKY8TBLMHHDSe2zdh/watch-dogs-2-grab-the-dedsec-fankit-and-marcus-holloway-cosplay-guide).
