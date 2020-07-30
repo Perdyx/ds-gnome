@@ -16,9 +16,13 @@ Log out select GNOME Classic as your session, then log back in again.
 
 ## Guide
 
+### Cursor
+
+[PixelFn3-Eclipse](https://www.gnome-look.org/p/1230923/)
+
 ### Extensions
 
-Make the following changes in /usr/share/gnome-shell/extensions/apps-menu@gnome-shell-extensions.
+Make the following changes in /usr/share/gnome-shell/extensions/apps-menu@gnome-shell-extensions.gcampax.github.com/extension.js.
 
 ```
 let index = Main.sessionMode.panel.left.indexOf('activities') + 1;
@@ -53,7 +57,6 @@ Install Activities Configurator extension from [https://extensions.gnome.org/ext
 - Set icon padding to "0"
 - Set text to "User: USERNAME@HOSTNAME"
 - Disable hotcorner
-- Hide panel rounded corners
 
 ### Fonts
 
@@ -62,7 +65,7 @@ These are up to personal preference really, as the ones listed in the reference 
 ```
 gsettings set org.gnome.desktop.interface font-name 'Ubuntu 11'
 gsettings set org.gnome.desktop.interface document-font-name 'Ubuntu 11'
-gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Ubuntu 11'
+gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Ubuntu Bold 11'
 ```
 
 For the monospace font, [https://sourcefoundry.org/hack/](https://sourcefoundry.org/hack/) works well.
@@ -82,6 +85,7 @@ Terminal colours are based on the Isotope theme found [here](http://terminal.sex
 
 ```
 sudo apt install -y terminator
+mkdir -p ~/.config/terminator
 cp configs/terminator ~/.config/terminator/config
 ```
 
@@ -92,7 +96,7 @@ Adwaita is the default on GNOME and looks close enough to the concept, however i
 The shell theme here is just a slightly modified version of the one found in the GNOME Classic session which should be included in the `gnome-session` Debian package. The default CSS file can be found at /usr/share/gnome-shell/theme/gnome-classic.css.
 
 ```
-mkdir -p .themes/DedSec/gnome-shell
+mkdir -p ~/.themes/DedSec/gnome-shell
 cp shell/gnome-shell.css ~/.themes/DedSec/gnome-shell
 ```
 
