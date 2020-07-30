@@ -16,19 +16,7 @@ Log out select GNOME Classic as your session, then log back in again.
 
 ## Guide
 
-### Fonts
-
-These are up to personal preference really, as the ones listed in the reference article are non-free, but if you are on Ubuntu or a derivative, Ubuntu Regular looks pretty good for the interface.
-
-```
-gsettings set org.gnome.desktop.interface font-name 'Ubuntu 11'
-gsettings set org.gnome.desktop.interface document-font-name 'Ubuntu 11'
-gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Ubuntu 11'
-```
-
-For the monospace font, [https://sourcefoundry.org/hack/](https://sourcefoundry.org/hack/) works well.
-
-### Panel
+### Extensions
 
 Make the following changes in /usr/share/gnome-shell/extensions/apps-menu@gnome-shell-extensions.
 
@@ -66,6 +54,18 @@ Install Activities Configurator extension from [https://extensions.gnome.org/ext
 - Set text to "User: USERNAME@HOSTNAME"
 - Disable hotcorner
 - Hide panel rounded corners
+
+### Fonts
+
+These are up to personal preference really, as the ones listed in the reference article are non-free, but if you are on Ubuntu or a derivative, Ubuntu Regular looks pretty good for the interface.
+
+```
+gsettings set org.gnome.desktop.interface font-name 'Ubuntu 11'
+gsettings set org.gnome.desktop.interface document-font-name 'Ubuntu 11'
+gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Ubuntu 11'
+```
+
+For the monospace font, [https://sourcefoundry.org/hack/](https://sourcefoundry.org/hack/) works well.
 
 ### Session
 
